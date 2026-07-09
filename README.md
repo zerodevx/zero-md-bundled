@@ -9,12 +9,12 @@ external CDN dependencies.
 
 ## Usage
 
-### Download distribution
+### 1. Download distribution
 
 Download `dist.zip` from the [releases](https://github.com/zerodevx/zero-md-bundled/releases) page
 and extract it into your project folder.
 
-### Load module entry-point
+### 2. Load module entry-point
 
 `zero-md-bundled` comes in two flavours:
 
@@ -58,29 +58,31 @@ cd zero-md-bundled
 npm i
 ```
 
-### Build the distribution yourself
+### Build locally
 
-1. Download CSS assets.
+#### Download CSS assets
+
+First, download and embed the default stylesheets into `downloaded.css`.
 
 ```bash
 npm run download-css
 ```
 
-This generates the template stylesheet `downloaded.css`.
+#### Build the distribution
 
-2. Build the distribution.
+Then build the project. This generates the build files into `/dist` directory.
 
 ```bash
 npm run build
 ```
 
-This generates the build files into `/dist` directory.
+## Contributing
 
 ### Bugs and feature requests
 
-Open a new issue or raise a PR - I'd be stoked to hear from you!
+Open a new issue or discussion - I'd be stoked to hear from you!
 
-### Contributing
+### Raise a PR
 
 Standard Github
 [contribution workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
