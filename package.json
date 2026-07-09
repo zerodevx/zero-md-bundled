@@ -1,0 +1,41 @@
+{
+  "name": "zero-md-bundled",
+  "version": "0.1.0",
+  "description": "zero-md bundled for local use",
+  "author": "Jason Lee <jason@zerodevx.com>",
+  "scripts": {
+    "dev": "vite",
+    "download-css": "node download-css > downloaded.css",
+    "build": "vite build && vite build -c vite-bundle.config.js",
+    "lint": "prettier --check . && eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.17.0",
+    "marked": "^18.0.5",
+    "marked-alert": "^2.1.2",
+    "marked-base-url": "^1.1.10",
+    "marked-gfm-heading-id": "^4.1.4",
+    "marked-highlight": "^2.2.4",
+    "mermaid": "^11.16.0",
+    "prettier": "^3.9.4",
+    "vite": "^8.1.4",
+    "zero-md": "^3.1.8"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./bundled": "./dist/bundled.js"
+  },
+  "license": "ISC",
+  "repository": "github:zerodevx/zero-md-bundled",
+  "homepage": "https://github.com/zerodevx/zero-md-bundled",
+  "keywords": [
+    "zero-md",
+    "bundled"
+  ]
+}
