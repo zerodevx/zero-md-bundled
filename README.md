@@ -2,28 +2,28 @@
 
 > `zero-md` bundled for local use
 
-Pre-packaged distribution of the [`zero-md`](https://github.com/zerodevx/zero-md) web component. It
-embeds all required CSS and libraries (such as Markdown parsing, syntax highlighting, math
-formatting and diagramming) so you can render beautiful Markdown documents locally without any
-external CDN dependencies.
+Pre-built distribution of the [`zero-md`](https://github.com/zerodevx/zero-md) web component. This
+embeds all required CSS and JS libraries (such as Markdown parsing, syntax highlighting, math
+formatting and diagramming) into a local bundle, enabling you to render beautiful Markdown documents
+without external CDN dependencies.
 
 ## Usage
 
-### 1. Download distribution
+### Step 1: Download the distribution
 
 Download `dist.zip` from the [releases](https://github.com/zerodevx/zero-md-bundled/releases) page
 and extract it into your project folder.
 
-### 2. Load module entry-point
+### Step 2: Load the module entry-point
 
 `zero-md-bundled` comes in two flavours:
 
 - Standard (`dist/index.js`) - RECOMMENDED
 - Fully Bundled (`dist/bundled.js`)
 
-Always use **Standard**, where the code is chunked and lazy-loaded. **Fully Bundled** combines
-everything into a single portable file - it's generally a very bad idea to load a single ≈6MB js
-file on the browser unless you know what you're doing.
+Always use **Standard**, where code is split into chunks and lazy-loaded. **Fully Bundled** combines
+everything into a single standalone file. Loading a ≈6MB JS file on the browser is generally not a
+good idea unless you know what you're doing.
 
 ```html
 <!doctype html>
@@ -33,7 +33,7 @@ file on the browser unless you know what you're doing.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>zero-md-bundled</title>
     <!-- Load the local bundle (no need for `?register`) -->
-    <script type="module" src="dist/index.js"></script>
+    <script type="module" src="/path/to/dist/index.js"></script>
   </head>
   <body>
     <zero-md src="example.md"></zero-md>
@@ -60,20 +60,11 @@ npm i
 
 ### Build locally
 
-#### Download CSS assets
-
-First, download and embed the default stylesheets into `downloaded.css`.
+Download latest CSS assets, then build project.
 
 ```bash
-npm run download-css
-```
-
-#### Build the distribution
-
-Then build the project. This generates the build files into `/dist` directory.
-
-```bash
-npm run build
+npm run download-css    # Download styles into `downloaded.css`
+npm run build           # Build project into `dist/`
 ```
 
 ## Contributing
