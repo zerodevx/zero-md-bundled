@@ -22,7 +22,7 @@ and extract it into your project folder.
 - Fully Bundled (`dist/bundled.js`)
 
 Always use **Standard**, where code is split into chunks and lazy-loaded. **Fully Bundled** combines
-everything into a single standalone file. Loading a ≈6MB JS file on the browser is generally not a
+everything into a single standalone file. Loading a ≈8MB JS file on the browser is generally not a
 good idea unless you know what you're doing.
 
 ```html
